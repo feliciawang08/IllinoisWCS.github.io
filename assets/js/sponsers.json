@@ -1,0 +1,64 @@
+{
+    "values": [{
+            "img": "../assets/img/logos/new-logos/logos/nextcapital.jpg",
+            "status": "platinum",
+            "link": "https://www.themuse.com/profiles/nextcapital"
+        },
+        {
+            "img": "../assets/img/logos/new-logos/logos/jpmc.jpeg",
+            "status": "platinum",
+            "link": "https://careers.jpmorgan.com/US/en/students/programs"
+        },
+        {
+            "img": "../assets/img/logos/new-logos/logos/goldman.png",
+            "status": "gold",
+            "link": "http://www.goldmansachs.com/careers/"
+        },
+        {
+            "img": "../assets/img/logos/new-logos/logos/hubspot.png",
+            "status": "gold",
+            "link": "https://www.hubspot.com/jobs"
+        },
+        {
+            "img": "../assets/img/logos/new-logos/logos/CMEGroup.jpg",
+            "status": "gold",
+            "link": "https://www.cmegroup.com/careers.html"
+        },
+        {
+            "img": "../assets/img/logos/new-logos/logos/pinterest.png",
+            "status": "gold",
+            "link": "https://careers.pinterest.com/"
+        },
+        {
+            "img": "../assets/img/logos/new-logos/logos/google.jpg",
+            "status": "gold",
+            "link": "https://careers.google.com/students/"
+        },
+        {
+            "img": "../assets/img/logos/new-logos/logos/at&t.png",
+            "status": "gold",
+            "link": "https://www.att.jobs/"
+        },
+        {
+            "img": "../assets/img/logos/new-logos/logos/facebook.png",
+            "status": "silver",
+            "link": "https://www.facebook.com/careers/"
+        },
+        {
+            "img": "../assets/img/logos/new-logos/logos/uber.png",
+            "status": "bronze",
+            "link": "https://www.uber.com/us/en/careers/"
+        },
+        {
+            "img": "../assets/img/logos/new-logos/logos/cruise.png",
+            "status": "bronze",
+            "link": "https://www.getcruise.com/careers/"
+        },
+        {
+            "img": "../assets/img/logos/new-logos/logos/splunk.png",
+            "status": "bronze",
+            "link": "https://www.splunk.com/en_us/careers.html"
+        }
+
+    ]
+}

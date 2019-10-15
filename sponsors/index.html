@@ -24,12 +24,14 @@
     <link rel="stylesheet" type="text/css" href="../assets/lib/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../assets/lib/fontawesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
 
     <script type="text/javascript" src="../assets/lib/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="../assets/lib/jquery-easing-original/jquery.easing.min.js"></script>
     <script type="text/javascript" src="../assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../assets/lib/mustache/mustache.min.js"></script>
     <script type="text/javascript" src="../assets/lib/isotope/dist/isotope.pkgd.min.js"></script>
+    <script type="text/javascript" src="../assets/js/sponsers.js"></script>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -67,99 +69,119 @@
 
     <section id="sponsors">
         <h1 align="center">Sponsors</h1>
-        <ul class="list">
-            <li class="list-item">
-                <a class="list-item-link" href="https://campus.capitalone.com/internships/">
-                    <img class="list-item-image" src="../assets/img/logos/new-logos/logos/C1C-logo.jpg" />
+        <script type="text/x-mustache" id="sponserCards">
+            {{#values}}
+            <div class="card border border-warning" style="width: 18rem;">
+                <img align="center" src="{{img}}" class=" card-img-top " alt="... ">
+                <div class="card-body " align="center ">
+                    {{#status=platinum}}
+                    <a href="{{link}}" id="card-button" class="btn btn-primary ">PLATINUM</a> {{/status=platinum}} {{^status=gold}}
+                    <a href="{{link}}" id="card-button" class="btn btn-warning ">GOLD</a> {{/status=gold}} {{^status=silver}}
+                    <a href="{{link}}" id="card-button" class="btn btn-secondary ">SILVER</a> {{/status=silver}} {{^status=bronze}}
+                    <a href="{{link}}" id="card-button" class="btn btn-danger ">bronze</a> {{/status=bronze}}
+
+                </div>
+            </div>
+
+            {{/values}}
+        </script>
+        <div id="sponsersDisplay" role="tablist" aria-multiselectable="true"></div>
+
+
+
+        <!-- <ul class="list ">
+            <li class="list-item ">
+                <a class="list-item-link " href="https://campus.capitalone.com/internships/ ">
+                    <img class="list-item-image " src="../assets/img/logos/new-logos/logos/C1C-logo.jpg " />
                 </a>
             </li>
-            <li class="list-item">
-                <a class="list-item-link" href="https://www.flexport.com/careers">
-                    <img class="list-item-image" src="../assets/img/logos/new-logos/logos/flexport.png" />
+            <li class="list-item ">
+                <a class="list-item-link " href="https://www.flexport.com/careers ">
+                    <img class="list-item-image " src="../assets/img/logos/new-logos/logos/flexport.png " />
                 </a>
             </li>
-            <li class="list-item">
-                <a class="list-item-link" href="https://careers.google.com/students/">
-                    <img class="list-item-image" src="../assets/img/logos/new-logos/logos/google.jpg" />
+            <li class="list-item ">
+                <a class="list-item-link " href="https://careers.google.com/students/ ">
+                    <img class="list-item-image " src="../assets/img/logos/new-logos/logos/google.jpg " />
                 </a>
             </li>
-            <li class="list-item">
-                <a class="list-item-link" href="https://careers.jpmorgan.com/careers/US/en/programs">
-                    <img class="list-item-image" src="../assets/img/logos/new-logos/logos/jpmc.jpeg" />
+            <li class="list-item ">
+                <a class="list-item-link " href="https://careers.jpmorgan.com/careers/US/en/programs ">
+                    <img class="list-item-image " src="../assets/img/logos/new-logos/logos/jpmc.jpeg " />
                 </a>
             </li>
-            <li class="list-item">
-                <a class="list-item-link" href="https://careers.microsoft.com/students/internships">
-                    <img class="list-item-image" src="../assets/img/logos/new-logos/logos/mslogo.jpg" />
+            <li class="list-item ">
+                <a class="list-item-link " href="https://careers.microsoft.com/students/internships ">
+                    <img class="list-item-image " src="../assets/img/logos/new-logos/logos/mslogo.jpg " />
                 </a>
             </li>
-            <li class="list-item">
-                <a class="list-item-link" href="https://www.themuse.com/profiles/nextcapital">
-                    <img class="list-item-image" src="../assets/img/logos/new-logos/logos/nextcapital.jpg" />
+            <li class="list-item ">
+                <a class="list-item-link " href="https://www.themuse.com/profiles/nextcapital ">
+                    <img class="list-item-image " src="../assets/img/logos/new-logos/logos/nextcapital.jpg " />
                 </a>
             </li>
-            <li class="list-item">
-                <a class="list-item-link" href="https://www.qualtrics.com/careers/">
-                    <img class="list-item-image" src="../assets/img/logos/new-logos/logos/qualtrics.jpg" />
+            <li class="list-item ">
+                <a class="list-item-link " href="https://www.qualtrics.com/careers/ ">
+                    <img class="list-item-image " src="../assets/img/logos/new-logos/logos/qualtrics.jpg " />
                 </a>
             </li>
-            <li class="list-item">
-                <a class="list-item-link" href="https://www.relativity.com/careers/internships/">
-                    <img class="list-item-image" src="../assets/img/logos/new-logos/logos/relativity.jpg" />
+            <li class="list-item ">
+                <a class="list-item-link " href="https://www.relativity.com/careers/internships/ ">
+                    <img class="list-item-image " src="../assets/img/logos/new-logos/logos/relativity.jpg " />
                 </a>
             </li>
-            <li class="list-item">
-                <a class="list-item-link" href="https://www.rubrik.com/company/careers/">
-                    <img class="list-item-image" src="../assets/img/logos/new-logos/logos/Rubrik-Logo-1024.jpg" />
+            <li class="list-item ">
+                <a class="list-item-link " href="https://www.rubrik.com/company/careers/ ">
+                    <img class="list-item-image " src="../assets/img/logos/new-logos/logos/Rubrik-Logo-1024.jpg " />
                 </a>
             </li>
-            <li class="list-item">
-                <a class="list-item-link" href="https://northerntrustcareers.com/">
-                    <img class="list-item-image" src="../assets/img/logos/new-logos/logos/northerntrust.png" />
+            <li class="list-item ">
+                <a class="list-item-link " href="https://northerntrustcareers.com/ ">
+                    <img class="list-item-image " src="../assets/img/logos/new-logos/logos/northerntrust.png " />
                 </a>
             </li>
-            <li class="list-item">
-                <a class="list-item-link" href="https://careers.ibm.com/">
-                    <img class="list-item-image" src="../assets/img/logos/new-logos/logos/ibm.png" />
+            <li class="list-item ">
+                <a class="list-item-link " href="https://careers.ibm.com/ ">
+                    <img class="list-item-image " src="../assets/img/logos/new-logos/logos/ibm.png " />
                 </a>
             </li>
-            <li class="list-item">
-                <a class="list-item-link" href="http://www.goldmansachs.com/careers/">
-                    <img class="list-item-image" src="../assets/img/logos/new-logos/logos/goldman.png" />
+            <li class="list-item ">
+                <a class="list-item-link " href="http://www.goldmansachs.com/careers/ ">
+                    <img class="list-item-image " src="../assets/img/logos/new-logos/logos/goldman.png " />
                 </a>
             </li>
-            <li class="list-item">
-                <a class="list-item-link" href="https://liveramp.com/careers/">
-                    <img class="list-item-image" src="../assets/img/logos/new-logos/logos/liveramp.png" />
+            <li class="list-item ">
+                <a class="list-item-link " href="https://liveramp.com/careers/ ">
+                    <img class="list-item-image " src="../assets/img/logos/new-logos/logos/liveramp.png " />
                 </a>
             </li>
-            <li class="list-item">
-                <a class="list-item-link" href="https://www.baxter.com/careers">
-                    <img class="list-item-image" src="../assets/img/logos/new-logos/logos/baxter.png" />
+            <li class="list-item ">
+                <a class="list-item-link " href="https://www.baxter.com/careers ">
+                    <img class="list-item-image " src="../assets/img/logos/new-logos/logos/baxter.png " />
                 </a>
             </li>
-            <li class="list-item">
-                <a class="list-item-link" href="https://www.baxter.com/careers">
-                    <img class="list-item-image" src="../assets/img/logos/new-logos/logos/facebook.jpg" />
+            <li class="list-item ">
+                <a class="list-item-link " href="https://www.baxter.com/careers ">
+                    <img class="list-item-image " src="../assets/img/logos/new-logos/logos/facebook.jpg " />
                 </a>
             </li>
-        </ul>
+        </ul> -->
     </section>
 
     <footer>
-        <div class="row">
-            <div class="col-md-4">
+        <div class="row ">
+            <div class="col-md-4 ">
                 <p>Women in Computer Science</p>
                 <p>1318 Siebel Center</p>
                 <p>201 North Goodwin Avenue</p>
                 <p>Urbana, IL 61801-2302</p>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 ">
                 <p>Contact us at:</p>
-                <p><b><a href="mailto:contact@illinoiswcs.org">contact@illinoiswcs.org</a></b></p>
+                <p><b><a href="mailto:contact@illinoiswcs.org ">contact@illinoiswcs.org</a></b></p>
                 <p>
                     <b>
-                            <a href="http://illinoiswcs.us8.list-manage.com/subscribe?u=6f053b4b1cec0f29449538eff&id=65a43965f5">Mailing List</a></h4>
+                            <a href="http://illinoiswcs.us8.list-manage.com/subscribe?u=6f053b4b1cec0f29449538eff&id=65a43965f5 ">Mailing List</a></h4>
                         </b>
                 </p>
             </div>

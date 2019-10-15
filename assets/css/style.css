@@ -569,3 +569,23 @@ body::after {
     z-index: -1;
     content: url("../img/wcs/new-officers.jpg") url("../img/officers/annavb2.jpg") url("../img/officers/jcolla3.jpg") url("../img/officers/gracesc2.jpg") url("../img/officers/ayushis3.jpg") url("../img/officers/cd13.jpg") url("../img/officers/dpratap2.jpg") url("../img/officers/sjain77.jpg") url("../img/officers/dramac4.jpg") url("../img/officers/sdesai51.jpg") url("../img/officers/nikitaa4.jpg") url("../img/officers/alicesf2.jpg") url("../img/officers/mihikaa2.jpg") url("../img/officers/aishani2.jpg") url("../img/officers/cechiu2.jpg") url("../img/officers/hh11.jpg") url("../img/officers/sazad2.jpg");
 } */
+
+.border {
+    border-style: solid !important;
+    /* border-color: #3175d8 !important; */
+    border-width: 3px !important;
+}
+
+.card-img-top {
+    top: 50%;
+    width: auto;
+    max-width: 100%;
+    max-height: 200px;
+    display: block;
+    margin: auto;
+}
+
+#card-button {
+    width: 100%;
+    display: block;
+}
