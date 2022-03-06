@@ -1,6 +1,5 @@
-.img_info_container {
-    display: inline-block;
-    position: relative;
+.avatar_container {
+    position: absolute;
 }
 
 .avatar_image {
@@ -9,24 +8,20 @@
     width: 20vh;
     border-radius: 50%;
     overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .avatar_image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
 }
 
 .user_info {
-    display: block;
+    display: inline-block;
     padding-left: 20px;
 }
 
-.flex_check {
-    display: flex;
-    padding-right: 10px;
-}
-
 .text-box {
-    flex-direction: column;
+    text-align: center;
 }
