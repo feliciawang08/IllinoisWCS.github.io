@@ -28,7 +28,7 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/d05d16eb4a.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="../../assets/lib/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="../../assets/lib/jquery-easing-original/jquery.easing.min.js"></script>
     <script type="text/javascript" src="../../assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -46,7 +46,7 @@
     </script>
 
 
-    <div id="resources" class="resources-page">
+    <div id="user_hub" class="user_social_media">
         <div class="row padded">
             <div class="col-sm-offset-1 col-md-10">
                 <h1 class="resource-header content-header" align="center">Settings</h1>
@@ -57,7 +57,7 @@
             <div class="tabs-left custom-tabs">
                 <ul class="nav nav-tabs">
                     <li>
-                        <a href="#general" data-toggle="tab">General</a>
+                        <a href="../settings/settings.html">General</a>
                     </li>
                     <li class="active">
                         <a href="#social_media" data-toggle="tab">Social Media</a>
@@ -66,134 +66,52 @@
                         <a href="https://script.google.com/a/macros/illinois.edu/s/AKfycbwK8sX2v8xfyFrksX9XWwARNW3nCd2nQsUDS69iUQ-irWZsOs-mr395zb7yR7NuspLOlg/exec" target="_blank">Resume</a>
                     </li>
                 </ul>
-                <div class="help">
+                <div class="content">
                     <div class="top_half">
-                        <div class="img_info_container">
+                        <div class="top_left">
                             <div class="avatar_image">
-                                <img src="../../assets/img/alumni/annedailidonis.jpeg" alt="Avatar"/>
+                                <img class="avatar_img" src="../images/default_avi.svg" alt="Avatar"/>
                             </div>
-                            <div class="user_info">
-                                <h2>Firstname Lastname</h2>
-                                <p>pronouns</p>
-                                <p>netid@illinois.edu</p>
+                            <div class="points">
+                                <a href="http://points.illinoiswcs.org/" target="_blank" style="color: black;">Points</a>
                             </div>
+                        </div>
+                        <div class="user_info">
+                            <h2>Firstname Lastname</h2>
+                            <p>pronouns</p>
+                            <p>netid@illinois.edu</p>
                         </div>
                     </div>
 
                     <div class="social_media">
-                        <div class="profiles"></div>
-                            <div class="input-container">
-                                <i class="fa-brands fa-facebook"></i>
-                                <input class="input-field" type="text" placeholder="Facebook" name="facebook">
-                            </div>
-                            <div class="input-container">
-                                <i class="fa-brands fa-linkedin"></i>
-                                <input class="input-field" type="text" placeholder="LinkedIn" name="linkedin">
-                            </div>
-                            <div class="input-container">
-                                <i class="fa-brands fa-github"></i>
-                                <input class="input-field" type="text" placeholder="Github" name="github">
-                            </div>
-                            <div class="input-container">
-                                <i class="fa-brands fa-snapchat"></i>
-                                <input class="input-field" type="text" placeholder="Snapchat" name="snapchat">
-                            </div>
-                            <div class="input-container">
-                                <i class="fa-brands fa-instagram"></i>
-                                <input class="input-field" type="text" placeholder="Snapchat" name="snapchat">
-                            </div>
+                        <div class="input-container">
+                            <i class="fa-brands fa-facebook" style="color: #3b5998;"></i>
+                            <input class="input-field" type="text" placeholder="Facebook" name="facebook">
+                        </div>
+                        <div class="input-container">
+                            <i class="fa-brands fa-linkedin" style="color: #0077b5;"></i>
+                            <input class="input-field" type="text" placeholder="LinkedIn" name="linkedin">
+                        </div>
+                        <div class="input-container">
+                            <i class="fa-brands fa-github"></i>
+                            <input class="input-field" type="text" placeholder="Github" name="github">
+                        </div>
+                        <div class="input-container">
+                            <i class="fa-brands fa-snapchat"></i>
+                            <input class="input-field" type="text" placeholder="Snapchat" name="snapchat">
+                        </div>
+                        <div class="input-container">
+                            <i class="fa-brands fa-instagram" style="color: #C13584;"></i>
+                            <input class="input-field" type="text" placeholder="Instagram" name="instagram">
                         </div>
                     </div>
-                </div>
-                
-                <!-- <div class="tab-content">
-                    <div class="tab-pane active" id="career-services">
-                        <h4 class="panel-title">
-                            WCS Officer Appointments
-                        </h4>
-                        <div>
-                            Interested in practicing your interview skills, getting your resume reviewed, or just scheduling a chat with a WCS Officer? 
-                            WCS offers the following Officer Appointment services: 
-                        </div>
-                        <div class="wcs-career-list">
-                            <div>
-                                <span class="bullet-point wcs-bg-pink"></span>
-                                <span>Mock Technical Interviews</span>
-                            </div>
-                            <div>
-                                <span class="bullet-point wcs-bg-blue"></span>
-                                <span>Mock Behavioral Interviews</span>
-                            </div>
-                            <div>
-                                <span class="bullet-point wcs-bg-pink"></span>
-                                <span>Resume Reviews</span>
-                            </div>
-                            <div>
-                                <span class="bullet-point wcs-bg-blue"></span>
-                                <span>Class Help</span>
-                            </div>
-                            <div>
-                                <span class="bullet-point wcs-bg-pink"></span>
-                                <span>Schedule Advice or Four Year Plan Reviews</span>
-                            </div>
-                            <div>
-                                <span class="bullet-point wcs-bg-blue"></span>
-                                <span>General Advice or Help (nothing specific necessary)</span>
-                            </div>
-                            <div>
-                                <span class="bullet-point wcs-bg-pink"></span>
-                                <span>Just a Chat!</span>
-                            </div>
-                        </div>
-                        <div>
-                            Fill out this 
-                            <a href="https://go.illinoiswcs.org/officer-appointments" target="_blank">
-                                form
-                            </a>
-                             to sign up for a mock interview or resume review with a WCS officer!
-                        </div>
-                        
-                        <br />
-                        <br />
-                        
-                        <h4 class="panel-title">
-                            Interview Buddy System
-                        </h4>
-                        <div>
-                            Check out WCS's Interview Buddy System and practice your interview skills with a buddy. 
-                            Add your contact info & what you’re looking for in an interview buddy 
-                            <a href="https://docs.google.com/spreadsheets/d/1ylEUT4xM34kXv9yEP8-Tg4UEJQyj3DMWogKGpmx-uLA/edit#gid=0" target="_blank">
-                                here
-                            </a> and reach out to someone!
-                        </div>
-                        
-                        <br />
-                        <br />
-                        
-                        <h4 class="panel-title">
-                            WCS Open Office
-                        </h4>
-                        <div>
-                            Drop by <a href="http://wcs.illinois.edu/openoffice/index.html">WCS Open Office</a>
-                            for drop-in resume reviews, elevator pitch practice, pre-career fair advice and career advice in general
-                        </div>
-                        
-                        <br />
-                        <br />
-                        
-                        <h4 class="panel-title">
-                            WCS Career Workshops
-                        </h4>
-                        <div>
-                            Come to our career workshop events hosted by Explorations, Mentoring, and more!
-                        </div>
+                    <div class="buttons">
+                        <button type="button" style="background-color: #F2777A;">Discard Changes</button>
+                        <button type="button" style="background-color: #48C5A7;">Save Changes</button>
                     </div>
-
-                    <div class="tab-pane" id="external-career"></div>
                 </div>
             </div>
-        </div> -->
-        
+        </div>
     </div>
 
     <div id="footer"></div>

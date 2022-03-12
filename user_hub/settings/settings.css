@@ -19,7 +19,16 @@
 
 .user_info {
     display: inline-block;
-    padding-left: 20px;
+    margin-left: 5%;
+    vertical-align: middle;
+}
+
+.user_info p {
+    padding: 3% 0%;
+}
+
+.user_info h2 {
+    padding: 3% 0%;
 }
 
 .text-box {
